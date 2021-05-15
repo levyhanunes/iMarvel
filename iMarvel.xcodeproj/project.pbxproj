@@ -18,6 +18,9 @@
 		ABDC98EA2650499A00144B94 /* BuscaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98E92650499A00144B94 /* BuscaCell.swift */; };
 		ABDC98F326504A8C00144B94 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98F226504A8C00144B94 /* UIView.swift */; };
 		ABDC98F626504B0000144B94 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98F526504B0000144B94 /* UIImageView.swift */; };
+		ABDC98F926504FDD00144B94 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98F826504FDD00144B94 /* UILabel.swift */; };
+		ABDC98FC2650570D00144B94 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98FB2650570D00144B94 /* UIButton.swift */; };
+		ABDC98FF265057B300144B94 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98FE265057B300144B94 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		ABDC98E92650499A00144B94 /* BuscaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaCell.swift; sourceTree = "<group>"; };
 		ABDC98F226504A8C00144B94 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ABDC98F526504B0000144B94 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		ABDC98F826504FDD00144B94 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		ABDC98FB2650570D00144B94 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		ABDC98FE265057B300144B94 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 			children = (
 				ABDC98F226504A8C00144B94 /* UIView.swift */,
 				ABDC98F526504B0000144B94 /* UIImageView.swift */,
+				ABDC98F826504FDD00144B94 /* UILabel.swift */,
+				ABDC98FB2650570D00144B94 /* UIButton.swift */,
+				ABDC98FE265057B300144B94 /* UIColor.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -188,7 +197,10 @@
 				ABDC98EA2650499A00144B94 /* BuscaCell.swift in Sources */,
 				ABDC98CE26502DE600144B94 /* ViewController.swift in Sources */,
 				ABDC98E52650464500144B94 /* BuscaVC.swift in Sources */,
+				ABDC98F926504FDD00144B94 /* UILabel.swift in Sources */,
+				ABDC98FC2650570D00144B94 /* UIButton.swift in Sources */,
 				ABDC98F326504A8C00144B94 /* UIView.swift in Sources */,
+				ABDC98FF265057B300144B94 /* UIColor.swift in Sources */,
 				ABDC98E026503F2100144B94 /* BaseTabBarVC.swift in Sources */,
 				ABDC98CA26502DE600144B94 /* AppDelegate.swift in Sources */,
 				ABDC98CC26502DE600144B94 /* SceneDelegate.swift in Sources */,
