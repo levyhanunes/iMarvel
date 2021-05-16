@@ -31,7 +31,6 @@ extension UIImageView {
         let image = UIImageView()
         
         
-        image.backgroundColor = .red
         image.layer.cornerRadius = 12
         image.layer.borderWidth = 0.5
         image.layer.borderColor = UIColor(white: 0.5, alpha: 1).cgColor
@@ -42,4 +41,6 @@ extension UIImageView {
         
         return image
     }
+    
+    
 }

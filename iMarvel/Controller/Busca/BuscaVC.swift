@@ -11,7 +11,7 @@ class BuscaVC : UITableViewController, UISearchBarDelegate {
     
     
     let cellId = "cellId"
-    var personagem : [ReturnApi] = []
+    var personagem : [Result] = []
     var total = 0
     
     
@@ -56,17 +56,18 @@ extension BuscaVC {
 
 
                 DispatchQueue.main.async {
-                    self.personagem = [characters]
+                    self.personagem.append(contentsOf: characters.data.results)
                     self.tableView.reloadData()
                     //print(characters.data.results)
-                    print(self.personagem.count)
-                    contador += 1
+                    print(characters.data.results)
                 }
-                //print(contador)
+                
+                
             }
             
         }
-        
+        //zera a lista para nao acumular as celulas
+        self.personagem = []
     }
 }
 
@@ -80,12 +81,15 @@ extension BuscaVC {
     
     //quantidade de linhas
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.personagem.count
+        
+        return personagem.count
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! BuscaCell
         
+        cell.character = self.personagem[indexPath.item]
         return cell
     }
 }

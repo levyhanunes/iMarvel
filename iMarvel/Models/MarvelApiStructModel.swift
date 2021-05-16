@@ -18,12 +18,17 @@ import Foundation
  // MARK: - Result
  struct Result: Codable {
     let id: Int
-    let modified, name, resourceURI, description: String
+    let name: String
+    let resourceURI: String
+    let description: String
     let thumbnail: Thumbnail
     
     enum CodingKeys: String, CodingKey{
         case id
-        case modified, name, resourceURI, thumbnail, description
+        case name
+        case resourceURI
+        case thumbnail
+        case description
  }
 
 
@@ -36,8 +41,12 @@ struct Heros: Codable{
 struct Thumbnail: Codable {
     let path: String
     let xtension = "extension"
+    var urlDaImag: String {
+        return "\(path).\(xtension)"
+    
     enum CodingKeys: String, CodingKey{
         case xtension, path
     }
     
+}
 }

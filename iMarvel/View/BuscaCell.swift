@@ -6,9 +6,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class BuscaCell : UITableViewCell {
+    
+    
+    
+    var character : Result! {
+        didSet{
+            nameLabel.text = character.name
+            descriptionLabel.text = character.description
+            if let url = URL(string: character.thumbnail.urlDaImag){
+                iconeImageView.kf.setImage(with: url)
+                iconeImageView.kf.indicatorType  = .activity
+            }else{iconeImageView.image = nil}
+            
+        }
+    }
     
     
     let iconeImageView : UIImageView = .iconeImageView()
@@ -57,7 +72,9 @@ class BuscaCell : UITableViewCell {
         
     }
     
-    
+    func prepareCell(with character: Character){
+
+    }
     
     
     //iniciar o construtor pq estava dando erro
