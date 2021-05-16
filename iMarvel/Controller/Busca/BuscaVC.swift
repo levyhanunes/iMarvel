@@ -7,19 +7,68 @@
 
 import UIKit
 
-class BuscaVC : UITableViewController {
+class BuscaVC : UITableViewController, UISearchBarDelegate {
     
     
     let cellId = "cellId"
+    var personagem : [ReturnApi] = []
+    var total = 0
+    
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+        
+        
         tableView.register(BuscaCell.self, forCellReuseIdentifier: cellId )
+        
+        self.configurarSearchBar()
+        
     }
+    
+    func loadCharacters() {
+        
+    }
+    
+    func configurarSearchBar(){
+        navigationItem.searchController = self.searchController
+        
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        self.searchController.searchBar.placeholder = "Search Characters"
+        self.searchController.searchBar.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.buscaCharacters(texto: searchText)
+    }
+      
 }
 
+var contador : Int = 0
+
+extension BuscaVC {
+    func buscaCharacters(texto: String){
+        ApiService.shared.buscaCharacters2(texto: texto) { (characters, err) in
+            if let characters = characters {
+
+
+                DispatchQueue.main.async {
+                    self.personagem = [characters]
+                    self.tableView.reloadData()
+                    //print(characters.data.results)
+                    print(self.personagem.count)
+                    contador += 1
+                }
+                //print(contador)
+            }
+            
+        }
+        
+    }
+}
 
 extension BuscaVC {
     
@@ -31,7 +80,7 @@ extension BuscaVC {
     
     //quantidade de linhas
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.personagem.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,3 +89,4 @@ extension BuscaVC {
         return cell
     }
 }
+

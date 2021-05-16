@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,11 @@
 		ABDC98F926504FDD00144B94 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98F826504FDD00144B94 /* UILabel.swift */; };
 		ABDC98FC2650570D00144B94 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98FB2650570D00144B94 /* UIButton.swift */; };
 		ABDC98FF265057B300144B94 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC98FE265057B300144B94 /* UIColor.swift */; };
+		ABDC99032650790700144B94 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC99022650790700144B94 /* NetworkService.swift */; };
+		ABDC99082650793100144B94 /* MarvelApiStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC99072650793100144B94 /* MarvelApiStructModel.swift */; };
+		ABDC990D265079A900144B94 /* SwiftHash in Frameworks */ = {isa = PBXBuildFile; productRef = ABDC990C265079A900144B94 /* SwiftHash */; };
+		ABDC9911265079F600144B94 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ABDC9910265079F600144B94 /* Alamofire */; };
+		ABDC991426508C7A00144B94 /* BuscaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC991326508C7A00144B94 /* BuscaService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,9 @@
 		ABDC98F826504FDD00144B94 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		ABDC98FB2650570D00144B94 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		ABDC98FE265057B300144B94 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		ABDC99022650790700144B94 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ABDC99072650793100144B94 /* MarvelApiStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiStructModel.swift; sourceTree = "<group>"; };
+		ABDC991326508C7A00144B94 /* BuscaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDC990D265079A900144B94 /* SwiftHash in Frameworks */,
+				ABDC9911265079F600144B94 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +82,8 @@
 		ABDC98C826502DE600144B94 /* iMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				ABDC99062650791300144B94 /* Models */,
+				ABDC990126506E1400144B94 /* API */,
 				ABDC98ED26504A3400144B94 /* Lib */,
 				ABDC98E82650498100144B94 /* View */,
 				ABDC98DE26503F0100144B94 /* Controller */,
@@ -123,6 +135,23 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		ABDC990126506E1400144B94 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC99022650790700144B94 /* NetworkService.swift */,
+				ABDC991326508C7A00144B94 /* BuscaService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ABDC99062650791300144B94 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC99072650793100144B94 /* MarvelApiStructModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +168,10 @@
 			dependencies = (
 			);
 			name = iMarvel;
+			packageProductDependencies = (
+				ABDC990C265079A900144B94 /* SwiftHash */,
+				ABDC9910265079F600144B94 /* Alamofire */,
+			);
 			productName = iMarvel;
 			productReference = ABDC98C626502DE600144B94 /* iMarvel.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +199,10 @@
 				Base,
 			);
 			mainGroup = ABDC98BD26502DE600144B94;
+			packageReferences = (
+				ABDC990B265079A900144B94 /* XCRemoteSwiftPackageReference "SwiftHash" */,
+				ABDC990F265079F600144B94 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = ABDC98C726502DE600144B94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,14 +232,17 @@
 			files = (
 				ABDC98F626504B0000144B94 /* UIImageView.swift in Sources */,
 				ABDC98EA2650499A00144B94 /* BuscaCell.swift in Sources */,
+				ABDC99082650793100144B94 /* MarvelApiStructModel.swift in Sources */,
 				ABDC98CE26502DE600144B94 /* ViewController.swift in Sources */,
 				ABDC98E52650464500144B94 /* BuscaVC.swift in Sources */,
 				ABDC98F926504FDD00144B94 /* UILabel.swift in Sources */,
+				ABDC991426508C7A00144B94 /* BuscaService.swift in Sources */,
 				ABDC98FC2650570D00144B94 /* UIButton.swift in Sources */,
 				ABDC98F326504A8C00144B94 /* UIView.swift in Sources */,
 				ABDC98FF265057B300144B94 /* UIColor.swift in Sources */,
 				ABDC98E026503F2100144B94 /* BaseTabBarVC.swift in Sources */,
 				ABDC98CA26502DE600144B94 /* AppDelegate.swift in Sources */,
+				ABDC99032650790700144B94 /* NetworkService.swift in Sources */,
 				ABDC98CC26502DE600144B94 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +443,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABDC990B265079A900144B94 /* XCRemoteSwiftPackageReference "SwiftHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onmyway133/SwiftHash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		ABDC990F265079F600144B94 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABDC990C265079A900144B94 /* SwiftHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABDC990B265079A900144B94 /* XCRemoteSwiftPackageReference "SwiftHash" */;
+			productName = SwiftHash;
+		};
+		ABDC9910265079F600144B94 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABDC990F265079F600144B94 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABDC98BE26502DE600144B94 /* Project object */;
 }

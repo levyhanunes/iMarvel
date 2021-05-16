@@ -18,7 +18,7 @@ class BaseTabBarVC : UITabBarController {
         
         let appsVC = self.criarTabItem(viewController: UIViewController(), title: "Apps", image: "icone-apps")
         
-        let buscaVC = self.criarTabItem(viewController: BuscaVC(), title: "Search Characters", image: "icone-busca")
+        let buscaVC = self.criarTabItem(viewController: BuscaVC(), title: "Characters", image: "icone-busca")
         
         viewControllers = [
             hojeVC,
